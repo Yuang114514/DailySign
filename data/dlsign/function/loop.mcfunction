@@ -6,5 +6,3 @@ advancement grant @a only dlsign:sign_root
 
 #通过日历同步签到状态
 execute as @a if score @s dlsign.calendar < #calendar dlsign.calendar run function dlsign:sync_status
-
-execute as @a[tag=dlsign.unsync] if score #need_sync dlsign.need_sync matches 1.. run function dlsign:sync_status
