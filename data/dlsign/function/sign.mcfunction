@@ -8,7 +8,7 @@ give @a[scores={dlsign.signing=1,dlsign.sign_days=1}] minecraft:enchanted_golden
 give @a[scores={dlsign.signing=1,dlsign.sign_days=2..}] minecraft:golden_apple 1
 
 #添加总人数
-execute as @a[scores={dlsign.signing=1}] run scoreboard players add #total_signd_players dlsign.total_signd_players 1
+execute as @a[scores={dlsign.signing=1}] run scoreboard players add dlsign dlsign.total_signd_players 1
 
 #授予成就
 advancement grant @a[scores={dlsign.signing=1,dlsign.sign_days=1}] only dlsign:fitst_sign

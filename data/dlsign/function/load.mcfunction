@@ -9,8 +9,8 @@ scoreboard objectives add dlsign.sign_days dummy {text:"签到天数",color:aqua
 
 #显示计分板
 scoreboard objectives setdisplay sidebar dlsign.sign_days
-scoreboard players set #total_signd_players dlsign.total_signd_players 0
-scoreboard players set #calendar dlsign.calendar 0
+scoreboard players set dlsign dlsign.total_signd_players 0
+scoreboard players set dlsign dlsign.calendar 0
 
 #启动周期性函数
 schedule function dlsign:notice 100t
