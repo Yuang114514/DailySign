@@ -1,0 +1,10 @@
+{
+  "criteria": {
+    "icmp_seq": {
+      "trigger": "minecraft:player_joined_world"
+    }
+  },
+  "rewards": {
+    "function": "dlsign:on_join"
+  }
+}

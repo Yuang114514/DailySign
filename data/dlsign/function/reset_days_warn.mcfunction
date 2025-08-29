@@ -1,0 +1,2 @@
+#输出二次确认消息
+tellraw @a [{text:"[DailySign] ",color:light_purple},{text:"你确定要清除",color:yellow},{text:"所有人",color:gold,bold:true},{text:"的签到数据吗？！",color:yellow},{text:" [",color:gray},{text:"确定",color:green,hover_event:{action:"show_text",value:{text:"再次确认！想清楚了！无法撤销！",color:dark_red}},click_event:{action:"run_command",command:"function dlsign:reset_days"}},{text:"]",color:gray}]

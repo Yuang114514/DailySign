@@ -1,0 +1,18 @@
+{
+    "criteria": {
+		"icmp_seq":{
+			"trigger": "minecraft:impossible"
+		}
+    },
+    "display": {
+        "announce_to_chat": true,
+        "description": "签到十天",
+        "frame": "task",
+        "icon": {
+            "id": "minecraft:writable_book"
+        },
+		"show_toast": true,
+		"title": "坚持就是胜利"
+    },
+	"parent": "dlsign:fitst_sign"
+}

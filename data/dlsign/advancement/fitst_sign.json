@@ -1,0 +1,21 @@
+{
+    "criteria": {
+		"icmp_seq":{
+			"trigger": "minecraft:impossible"
+		}
+    },
+    "display": {
+        "announce_to_chat": true,
+        "description": "第一次签到会给附魔金哦",
+        "frame": "task",
+        "icon": {
+            "id": "minecraft:enchanted_golden_apple"
+        },
+		"show_toast": true,
+		"title": "新手福利"
+    },
+	"parent": "dlsign:sign_root",
+	"rewards": {
+		"experience": 20
+	}
+}
