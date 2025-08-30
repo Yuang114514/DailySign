@@ -7,7 +7,8 @@ scoreboard objectives add dlsign.calendar dummy
 scoreboard objectives add dlsign.total_signd_players dummy {text:"今日签到总人数",color:aqua}
 scoreboard objectives add dlsign.sign_days dummy {text:"签到天数",color:aqua}
 scoreboard objectives add dlsign.need_sync dummy
-scoreboard objectives add dlsign.need_sync_days dummy
+scoreboard objectives add dlsign.reset_count dummy
+scoreboard objectives add dlsign.syncd_reset dummy
 
 #显示计分板
 scoreboard objectives setdisplay sidebar dlsign.sign_days
