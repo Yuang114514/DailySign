@@ -2,6 +2,7 @@
 tellraw @a [{text:"[DailySign] ",color:light_purple},{text:"正在重置签到信息......",color:aqua}]
 
 #重置签到人数
+scoreboard players set @a dlsign.signing 0
 scoreboard players set #dlsign dlsign.total_signd_players 0
 
 #日历加一

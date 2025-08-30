@@ -6,14 +6,14 @@
     },
     "display": {
         "announce_to_chat": true,
-        "description": "在一天中试图签到十次",
+        "description": "在一天中试图签到五千次",
         "frame": "task",
         "icon": {
-            "id": "minecraft:stone"
+            "id": "minecraft:calcite"
         },
 		"show_toast": true,
-		"title": "你也太无聊了吧",
+		"title": "还差亿点！",
         "hidden": true
     },
-	"parent": "dlsign:fitst_sign"
+	"parent": "dlsign:so_boring_1000"
 }

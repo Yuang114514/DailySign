@@ -1,0 +1,19 @@
+{
+    "criteria": {
+		"icmp_seq":{
+			"trigger": "minecraft:impossible"
+		}
+    },
+    "display": {
+        "announce_to_chat": true,
+        "description": "在一天中试图签到一万次",
+        "frame": "challenge",
+        "icon": {
+            "id": "minecraft:tuff"
+        },
+		"show_toast": true,
+		"title": "算了，我也不想写更多了，就到这吧！",
+        "hidden": true
+    },
+	"parent": "dlsign:so_boring_5000"
+}
