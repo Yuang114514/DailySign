@@ -1,5 +1,8 @@
 #重置自己的签到状态
-#execute as @a if score @s dlsign.calendar < #dlsign dlsign.calendar run scoreboard players set @s dlsign.signing 0
-#execute as @a if score @s dlsign.calendar < #dlsign dlsign.calendar run say /11
+scoreboard players set @s dlsign.signing 0
+
 #同步日历
-#execute as @a if score @s dlsign.calendar < #dlsign dlsign.calendar run scoreboard players add @s dlsign.calendar 1
+scoreboard players operation @s dlsign.calendar = #dlsign dlsign.calendar
+
+#输出成功消息
+tellraw @s [{text:"[DailySign] ",color:light_purple},{text:"成功同步签到状态，欢迎回来！",color:aqua},{text:"[点我签到]",color:blue,click_event:{command:"trigger dlsign.signing",action:"run_command"}}]

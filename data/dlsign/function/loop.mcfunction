@@ -5,6 +5,6 @@ scoreboard players enable @a dlsign.signing
 advancement grant @a only dlsign:sign_root
 
 #通过日历同步签到状态
-execute as @a[scores={dlsign.need_sync=1..}] run scoreboard players operation @s dlsign.need_sync = @s dlsign.calendar
-execute as @a[scores={dlsign.need_sync=1..}] run scoreboard players operation @s dlsign.need_sync -= #dlsign dlsign.calendar
+execute as @a run scoreboard players operation @s dlsign.need_sync = @s dlsign.calendar
+execute as @a run scoreboard players operation @s dlsign.need_sync -= #dlsign dlsign.calendar
 execute as @a if score @s dlsign.need_sync matches ..-1 run function dlsign:sync_status
