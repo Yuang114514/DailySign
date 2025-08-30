@@ -14,7 +14,7 @@ tellraw @a [{text:"[DailySign] ",color:light_purple},{text:"正在清除签到�
 
 #重置签到状态
 scoreboard players reset @a dlsign.signing
-scoreboard players set dlsign dlsign.total_signd_players 0
+scoreboard players set #dlsign dlsign.total_signd_players 0
 
 #输出成功消息
 tellraw @a [{text:"[DailySign] ",color:light_purple},{text:"清除签到数据成功！这一世，我要夺回属于我的一切！",color:aqua}]
