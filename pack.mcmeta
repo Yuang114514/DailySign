@@ -1,6 +1,7 @@
 {
   "pack": {
     "description": "你今天签到了吗",
-    "pack_format": 81
+    "pack_format": 81,
+    "supported_formats": [71, 81]
   }
 }
