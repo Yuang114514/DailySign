@@ -2,20 +2,19 @@
 cd "$(dirname "$0")"
 
 if [ $# -eq 0 ]; then
-    echo "错误：请提供版本号参数（格式：x.x.x）"
-    echo "用法：$0 <版本号>"
+    echo "没版本号"
     exit 1
 fi
 
 VERSION=$1
 
 if [[ ! $VERSION =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
-    echo "错误：版本号格式不正确，请使用 x.x.x 格式"
+    echo "版本号格式不正确"
     exit 1
 fi
 
 if [ ! -d "data" ] || [ ! -f "pack.mcmeta" ]; then
-    echo "错误：当前目录下未找到 data 文件夹或 pack.mcmeta 文件"
+    echo "没data或pack.mcmeta"
     exit 1
 fi
 

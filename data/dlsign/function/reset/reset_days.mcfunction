@@ -15,6 +15,7 @@ tellraw @a [{text:"[DailySign] ",color:light_purple},{text:"正在清除签到�
 #重置签到状态
 scoreboard players reset @a dlsign.signing
 scoreboard players set #dlsign dlsign.total_signd_players 0
+scoreboard players set #dlsign dlsign.calendar 0
 
 #重置次数加一
 scoreboard players add #dlsign dlsign.reset_count 1
