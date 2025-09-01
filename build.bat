@@ -1,10 +1,9 @@
-:: by SeepDeek
 @echo off
 chcp 65001 >nul
 setlocal enabledelayedexpansion
 
 echo ================================
-echo   DailySign 打包压缩工具
+echo   DailySign 打包压缩工具（带版本号）
 echo ================================
 echo.
 
@@ -21,10 +20,24 @@ if not exist "pack.mcmeta" (
     exit /b 1
 )
 
+:: 获取版本号参数
+set "VERSION=%1"
+if "%VERSION%"=="" (
+    set /p "VERSION=请输入版本号（格式为x.x.x）: "
+)
+
+:: 验证版本号格式
+echo %VERSION% | findstr /r "^[0-9][0-9]*\.[0-9][0-9]*\.[0-9][0-9]*$" >nul
+if errorlevel 1 (
+    echo 错误：版本号格式不正确，请使用x.x.x格式！
+    pause
+    exit /b 1
+)
+
 :: 设置变量
 set "SOURCE_DIR=%~dp0"
 set "TEMP_DIR=%SOURCE_DIR%DailySign"
-set "ZIP_FILE=%SOURCE_DIR%DailySign.zip"
+set "ZIP_FILE=%SOURCE_DIR%DailySign-%VERSION%.zip"
 
 :: 删除可能已存在的临时文件和压缩文件
 if exist "%TEMP_DIR%" (
@@ -61,7 +74,7 @@ if defined COMPRESS_CMD (
 ) else (
     :: 如果没有找到压缩工具，使用PowerShell
     echo 使用 PowerShell 进行压缩...
-    powershell -command "Compress-Archive -Path 'DailySign' -DestinationPath 'DailySign.zip' -Force"
+    powershell -command "Compress-Archive -Path 'DailySign' -DestinationPath 'DailySign-%VERSION%.zip' -Force"
 )
 
 :: 清理临时文件
@@ -72,7 +85,7 @@ rmdir /s /q "%TEMP_DIR%"
 echo.
 echo ================================
 echo   操作完成！
-echo   已创建压缩文件: DailySign.zip
+echo   已创建压缩文件: DailySign-%VERSION%.zip
 echo ================================
 
 :: 等待用户按键
