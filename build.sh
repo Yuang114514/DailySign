@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# 脚本名称: pack_and_compress.sh
-# 功能: 打包data文件夹和pack.mcmeta到DailySign目录并压缩
-
 # 设置变量
 SOURCE_FILES=("data" "pack.mcmeta")
 TARGET_DIR="DailySign"
@@ -43,8 +40,8 @@ else
     exit 1
 fi
 
-# 可选: 删除临时目录（取消注释以下行来启用）
-# echo "清理临时文件..."
-# rm -rf "$TARGET_DIR"
+# 删除临时目录
+echo "清理临时文件..."
+rm -rf "$TARGET_DIR"
 
 echo "操作完成!"
