@@ -14,6 +14,7 @@ advancement grant @a[scores={dlsign.signing=10000}] only dlsign:so_boring_10000
 #通过fuck mojang同步签到状态
 execute as @a run scoreboard players operation @s dlsign.need_sync = @s dlsign.calendar
 execute as @a run scoreboard players operation @s dlsign.need_sync -= #dlsign dlsign.calendar
+execute as @a if score @s dlsign.need_sync matches ..-1 run function dlsign:new_day_player_join_run/day_join_check
 
 #通过fuck mojang同步签到天数
 execute as @a run scoreboard players operation @s dlsign.syncd_reset = @s dlsign.reset_count

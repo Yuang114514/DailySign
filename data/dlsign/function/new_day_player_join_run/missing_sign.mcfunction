@@ -5,4 +5,4 @@ scoreboard players operation @s dlsign.missing_signd_days = @s dlsign.sign_days
 scoreboard players reset @s dlsign.sign_days
 
 #重置补签计分板
-trigger dlsign.resign set 0
+trigger dlsign.resigning set -2
