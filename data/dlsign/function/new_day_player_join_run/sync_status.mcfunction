@@ -1,8 +1,12 @@
+#同步日历
+scoreboard players set @s dlsign.need_sync 0
+scoreboard players operation @s dlsign.calendar = #dlsign dlsign.calendar
+
 #重置自己的签到状态
 execute if score @s dlsign.signing matches 2.. run scoreboard players set @s dlsign.signing 0
 
-#同步日历
-scoreboard players operation @s dlsign.calendar = #dlsign dlsign.calendar
+#允许签到
+scoreboard players enable @s dlsign.signing
 #fuck mojang
 #why cant use /execute if score
 #just support fake player hard???

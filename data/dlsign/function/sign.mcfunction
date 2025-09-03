@@ -20,5 +20,8 @@ playsound minecraft:entity.experience_orb.pickup master @a[scores={dlsign.signin
 #输出成功消息
 tellraw @a[scores={dlsign.signing=1}] [{text:"[DailySign] ",color:light_purple},{text:"签到成功！",color:green},{text:"您已签到 ",color:gold},{score:{"name":"*", "objective":"dlsign.sign_days"},color:gold,bold:true},{text:" 天",color:gold}]
 
+#成就触发器
+scoreboard players enable @a[scores={dlsign.signing=1}] dlsign.signing
+
 #结束签到操作
 scoreboard players set @a[scores={dlsign.signing=1}] dlsign.signing 2
