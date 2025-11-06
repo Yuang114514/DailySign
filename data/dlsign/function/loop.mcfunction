@@ -1,7 +1,7 @@
 #给新来的玩家添加计分板
-scoreboard players enable @a dlsign.signing
 scoreboard players enable @a dlsign.resigning
-
+xp add @a[tag=!dlsign.old_fish] 1 levels
+tag @a[tag=!dlsign.old_fish] add dlsign.old_fish
 #给玩家成就
 advancement grant @a only dlsign:sign_root
 advancement grant @a[scores={dlsign.signing=10}] only dlsign:so_boring

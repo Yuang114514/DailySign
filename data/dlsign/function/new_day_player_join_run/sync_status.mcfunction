@@ -3,6 +3,9 @@ execute if score @s dlsign.signing matches 2.. run scoreboard players set @s dls
 
 #同步日历
 scoreboard players operation @s dlsign.calendar = #dlsign dlsign.calendar
+
+#允许签到
+scoreboard players enable @s dlsign.signing
 #fuck mojang
 #why cant use /execute if score
 #just support fake player hard???
