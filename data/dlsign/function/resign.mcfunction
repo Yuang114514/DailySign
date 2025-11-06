@@ -4,7 +4,7 @@ tag @a[scores={dlsign.resigning=-1,dlsign.xp=..29}] remove dlsign.missing_sign_n
 scoreboard players set @a[scores={dlsign.resigning=-1,dlsign.xp=..29}] dlsign.resigning -2
 #有经验的玩家可以补签
 #消耗经验
-execute as @a[scores={dlsign.resigning=-1,dlsign.xp=30..}] if score @s dlsign.xp matches 30.. run xp add @s -30 levels
+xp add @a[scores={dlsign.resigning=-1,dlsign.xp=30..}] -30 levels
 
 #补全签到天数
 execute as @a[scores={dlsign.resigning=-1,dlsign.xp=30..}] run scoreboard players operation @s dlsign.sign_days += @s dlsign.missing_signd_days
@@ -17,4 +17,5 @@ tellraw @a[scores={dlsign.resigning=-1,dlsign.xp=30..}] [{text:"[DailySign] ",co
 tag @a[scores={dlsign.resigning=-1,dlsign.xp=30..}] remove dlsign.missing_sign_noticed
 
 #结束补签操作
+scoreboard players set @a[scores={dlsign.resigning=-1,dlsign.xp=30..}] dlsign.resigning 0
 scoreboard players set @a[scores={dlsign.resigning=-1,dlsign.xp=30..}] dlsign.resigning 0

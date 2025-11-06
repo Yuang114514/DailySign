@@ -1,5 +1,13 @@
 #给新来的玩家添加计分板
-scoreboard players enable @a dlsign.resigning
+scoreboard players enable @a dlsign.signing
+scoreboard players set @a[tag=!dlsign.old_fish] dlsign.calendar 0
+scoreboard players set @a[tag=!dlsign.old_fish] dlsign.missing_signd_days 0
+scoreboard players set @a[tag=!dlsign.old_fish] dlsign.need_sync 0
+scoreboard players set @a[tag=!dlsign.old_fish] dlsign.reset_count 0
+scoreboard players set @a[tag=!dlsign.old_fish] dlsign.resigning 0
+scoreboard players set @a[tag=!dlsign.old_fish] dlsign.sign_days 0
+scoreboard players set @a[tag=!dlsign.old_fish] dlsign.signing 0
+scoreboard players set @a[tag=!dlsign.old_fish] dlsign.syncd_reset 0
 xp add @a[tag=!dlsign.old_fish] 1 levels
 tag @a[tag=!dlsign.old_fish] add dlsign.old_fish
 #给玩家成就
