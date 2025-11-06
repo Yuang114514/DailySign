@@ -1,7 +1,5 @@
 {
   "values": [
-    "dlsign:loop",
-    "dlsign:sign",
-    "dlsign:resign"
+    "dlsign:loop"
   ]
 }
