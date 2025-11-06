@@ -1,6 +1,0 @@
-#判断输出哪一条签到提醒消息
-execute as @a[scores={dlsign.signing=0,dlsign.resigning=0..}] if score #dlsign dlsign.total_signd_players matches 0 run tellraw @s [{text:"[DailySign] ",color:light_purple},{text:"很幸运，你将是今天第一个签到的！",color:yellow},{text:"[点我签到]",color:"#7a7aff",click_event:{command:"trigger dlsign.signing",action:"run_command"}}]
-execute as @a[scores={dlsign.signing=0,dlsign.resigning=0..}] unless score #dlsign dlsign.total_signd_players matches 0 run tellraw @s [{text:"[DailySign] ",color:light_purple},{text:"今天已经有 ",color:yellow},{score:{name:"#dlsign",objective:"dlsign.total_signd_players"},color:yellow,bold:true},{text:" 个人签到了，",color:yellow},{text:"而你还没有！",color:red,bold:true},{text:"[点我签到]",color:"#7a7aff",click_event:{command:"trigger dlsign.signing",action:"run_command"}}]
-execute as @a[scores={dlsign.signing=0,dlsign.resigning=-2}] run tellraw @s [{text:"[DailySign] ",color:light_purple},{text:"你昨天漏签了！",color:red,bold:true},{text:"签到天数被重置了！",color:dark_aqua},{text:"[点我花费30级经验补签]",color:"#7a7aff",bold:true,click_event:{action:run_command,command:"trigger dlsign.resigning"},hover_event:{action:show_text,value:{text:"确定你有30级经验哦",color:aqua}}}]
-#开始下一周期
-schedule function dlsign:notice 100t
