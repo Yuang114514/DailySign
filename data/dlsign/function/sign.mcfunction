@@ -2,12 +2,12 @@
 scoreboard players set @s dlsign.sign_status 1
 scoreboard players set @s dlsign.sign 2
 
+#给予奖励
+give @s[scores={dlsign.player_signed_days=1..}] minecraft:golden_apple 1
+give @s[scores={dlsign.player_signed_days=0}] minecraft:enchanted_golden_apple 1
+
 #增加签到天数
 scoreboard players add @s dlsign.player_signed_days 1
-
-#给予奖励
-give @s[scores={dlsign.old_fish=1}] minecraft:golden_apple 1
-give @s[scores={dlsign.old_fish=0}] minecraft:enchanted_golden_apple 1
 
 #输出签到成功消息
 tellraw @s \
@@ -19,3 +19,5 @@ tellraw @s \
 
 #标记为已签到
 scoreboard players set @s dlsign.sign_status 2
+
+return 0
