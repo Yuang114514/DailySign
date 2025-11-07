@@ -22,6 +22,8 @@ Minecraft服务端签到插件，但是数据包
 
 - 基于/schedule的自动复位
 
+- 支持1.20.2+以上的Minecraft版本
+
 # TODO
 
 - [ ] 断签和补签（写一半了）
