@@ -2,11 +2,7 @@
 
 Minecraft服务端签到插件，但是数据包
 
-网上有很多给Minecraft服务端开发的签到插件，但是它们都有一个大问题：用Java写成！这无法让它们跨平台运行：Fabric、Forge、NeoForge、Quilt、Paper、Bukkit、Velocity......你能找到一个能跨全平台运行的插件算我输
-
-正好Mojang在1.13版本加入了“数据包”，可以让游戏的命令执行自动化。而计分板、标签可以当作变量、/scoreboard players operation运算......完完全全的一门全新的编程语言，专为Minecraft设计！
-
-这么嵌入式的编程语言怎么能不用呢？于是就有了DailySign。
+可以在支持原版数据包的服务端上运行的签到插件
 
 # 功能
 
