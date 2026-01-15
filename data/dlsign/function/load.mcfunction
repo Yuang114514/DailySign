@@ -11,7 +11,8 @@ scoreboard objectives add dlsign.calendar dummy
 scoreboard objectives add dlsign.sign trigger
 scoreboard objectives add dlsign.total_signed_players dummy
 scoreboard objectives add dlsign.player_sync_stat dummy
-scoreboard objectives add dlsign.initialized dummy
+scoreboard objectives add dlsign.lang trigger
+#语言对照：0=zh_cn 1=en_us
 
 #显示计分板
 scoreboard players set #dlsign dlsign.total_signed_players 0

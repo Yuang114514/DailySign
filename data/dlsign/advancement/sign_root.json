@@ -7,7 +7,7 @@
     "display": {
       "announce_to_chat": false,
       "background": "dlsign:none",
-      "description": "点击聊天消息签到\n或使用\n/trigger dlsign:signing签到",
+      "description": "点击聊天消息签到\n或使用\n/trigger dlsign.sign签到",
       "frame": "task",
       "icon": {
         "id": "minecraft:oak_hanging_sign"
