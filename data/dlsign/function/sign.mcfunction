@@ -7,6 +7,7 @@ function dlsign:config/sign_reward
 
 #增加签到天数
 scoreboard players add @s dlsign.player_signed_days 1
+scoreboard players add #dlsign dlsign.total_signed_players 1
 
 #输出签到成功消息
 execute \

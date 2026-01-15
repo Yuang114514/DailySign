@@ -2,8 +2,16 @@
 scoreboard players enable @a dlsign.sign
 scoreboard players enable @a dlsign.lang
 
+#给予成就
+advancement grant @a[scores={dlsign.sign=10}] only dlsign:so_boring_10
+advancement grant @a[scores={dlsign.sign=100}] only dlsign:so_boring_100
+advancement grant @a[scores={dlsign.sign=500}] only dlsign:so_boring_500
+advancement grant @a[scores={dlsign.sign=1000}] only dlsign:so_boring_1000
+advancement grant @a[scores={dlsign.sign=5000}] only dlsign:so_boring_5000
+advancement grant @a[scores={dlsign.sign=10000}] only dlsign:so_boring_10000
+
 #执行签到处理函数
-scoreboard players set @a[scores={dlsign.sign_status=2}] dlsign.sign 2
+#scoreboard players set @a[scores={dlsign.sign_status=2}] dlsign.sign 2
 execute \
     as @a[scores={dlsign.sign=1}] \
     run function dlsign:sign

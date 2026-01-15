@@ -18,7 +18,7 @@ execute \
         {color:gold,bold:1b,\
             score:{name:"#dlsign",objective:"dlsign.total_signed_players"}},\
         {text:" 位玩家今天已签到，你也签一个吧！",color:yellow},\
-        {text:"[点我签到]",color:aqua,\
+        {text:"[点我签到]",color:aqua,underlined:1b,\
             hover_event:{action:show_text,\
                 value:{text:"不要错过奖励！",color:gold,bold:1b}},\
             click_event:{action:run_command,command:"trigger dlsign.sign"}}]

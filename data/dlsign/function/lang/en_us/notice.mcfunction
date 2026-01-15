@@ -19,7 +19,7 @@ execute \
             {color:gold,bold:1b,\
                 score:{name:"#dlsign",objective:"dlsign.total_signed_players"}},\
             {text:" Players Signed Today, Join Them!",color:yellow},\
-            {text:"[Click to Sign]",color:aqua,\
+            {text:"[Click to Sign]",color:blue,underlined:1b,\
                 hover_event:{action:show_text,\
                     value:{text:"Never Miss the Reward!",color:gold,bold:1b}},\
                 click_event:{action:run_command,command:"trigger dlsign.sign"}}]
