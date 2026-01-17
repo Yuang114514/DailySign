@@ -24,12 +24,14 @@ execute \
 #玩家重新签到
 execute \
     as @a \
-    run scoreboard players operation @s dlsign.calendar -= #dlsign dlsign.calendar
-
+    run scoreboard players operation @s dlsign.player_sync_stat = @s dlsign.calendar
 execute \
-    as @a[scores={dlsign.calendar=-1}] \
+    as @a \
+    run scoreboard players operation @s dlsign.player_sync_stat -= #dlsign dlsign.calendar
+execute \
+    as @a[scores={dlsign.player_sync_stat=-1}] \
     run function dlsign:day_after_day/player_sync_stats
 execute \
-    as @a[scores={dlsign.calendar=..-2}] \
+    as @a[scores={dlsign.player_sync_stat=..-2}] \
     run function dlsign:day_after_day/missing_sign
 #正常=0，重签=1，补签=2......

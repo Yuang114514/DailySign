@@ -20,8 +20,11 @@ scoreboard objectives add dlsign.player_signed_days dummy \
 scoreboard objectives add dlsign.sign_status dummy
 scoreboard objectives add dlsign.calendar dummy
 scoreboard objectives add dlsign.sign trigger
+scoreboard objectives add dlsign.patching_sign trigger
 scoreboard objectives add dlsign.total_signed_players dummy
 scoreboard objectives add dlsign.lang trigger
+scoreboard objectives add dlsign.player_sync_stat dummy
+scoreboard objectives add dlsign.xp_levels level
 #语言对照：0=zh_cn 1=en_us
 
 #显示计分板

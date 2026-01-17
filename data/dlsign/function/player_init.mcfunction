@@ -1,7 +1,7 @@
 #玩家初始化
+scoreboard players set @s dlsign.sign 0
 scoreboard players set @s dlsign.sign_status 0
 scoreboard players set @s dlsign.player_signed_days 0
-scoreboard players set @s dlsign.calendar 0
 scoreboard players set @s dlsign.lang 114514
 tellraw @s \
     [\
@@ -32,5 +32,8 @@ tellraw @s \
             }\
         }\
     ]
+
+scoreboard players operation @s dlsign.calendar = #dlsign dlsign.calendar
+scoreboard players remove @s dlsign.calendar 1
 
 tag @s add dlsign.initialized

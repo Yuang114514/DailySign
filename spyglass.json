@@ -1,5 +1,8 @@
 {
     "env":{
         "gameVersion": "1.21.8"
-    }
+    },
+    "lint": {
+      "a": true
+   }
 }

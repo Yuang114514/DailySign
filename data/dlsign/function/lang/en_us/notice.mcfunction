@@ -13,7 +13,7 @@ execute \
                 },\
                 {\
                     text:"[Click to Sign]",\
-                    color:blue,\
+                    color:aqua,\
                     underlined:1b,\
                     hover_event:{\
                         action:show_text,\

@@ -10,7 +10,7 @@ tellraw @s \
         },\
         {\
             text:"[点我签到]",\
-            color:blue,\
+            color:aqua,\
             underlined:1b,\
             hover_event:{\
                 action:show_text,\
