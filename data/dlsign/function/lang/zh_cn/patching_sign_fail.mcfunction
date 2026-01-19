@@ -5,24 +5,8 @@ tellraw @s \
             color:light_purple\
         },\
         {\
-            text:"你有未签到的天数！你的天数被清零了！",\
+            text:"补签失败！你的经验等级不足！",\
             color:red\
-        },\
-        {\
-            text:"您可以通过花费",\
-            color:yellow\
-        },\
-        {\
-            type:"nbt",\
-            nbt:Config.Value.PatchSignCostXP,\
-            interpret:false,\
-            source:"storage",\
-            storage:"dlsign:storage",\
-            color:yellow\
-        },\
-        {\
-            text:"级经验来补签",\
-            color:yellow\
         },\
         {\
             text:" [点我补签]",\

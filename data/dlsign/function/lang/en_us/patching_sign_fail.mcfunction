@@ -5,24 +5,8 @@ tellraw @s \
             color:light_purple\
         },\
         {\
-            text:"You Got Unsigned Days! Your Signed Days Are Got Cleared!",\
+            text:"Sign Patching Failed! You Don't Have Enough XP!",\
             color:red\
-        },\
-        {\
-            text:" You Can Cost ",\
-            color:yellow\
-        },\
-        {\
-            type:"nbt",\
-            nbt:Config.Value.PatchSignCostXP,\
-            interpret:false,\
-            source:"storage",\
-            storage:"dlsign:storage",\
-            color:yellow\
-        },\
-        {\
-            text:" Levels of XP to Patch Your Sign Days",\
-            color:yellow\
         },\
         {\
             text:" [Click to Patch Sign]",\

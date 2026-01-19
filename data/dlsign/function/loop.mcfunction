@@ -29,9 +29,17 @@ execute \
     as @a \
     run scoreboard players operation @s dlsign.player_sync_stat -= #dlsign dlsign.calendar
 execute \
-    as @a[scores={dlsign.player_sync_stat=-1}] \
-    run function dlsign:day_after_day/player_sync_stats
+    as @a[scores={dlsign.sign_status=..1,dlsign.player_sync_stat=..-2}] \
+    run function dlsign:day_after_day/missing_sign
 execute \
     as @a[scores={dlsign.player_sync_stat=..-2}] \
     run function dlsign:day_after_day/missing_sign
+execute \
+    as @a[scores={dlsign.player_sync_stat=-1,dlsign.sign_status=2}] \
+    run function dlsign:day_after_day/player_sync_stats
 #正常=0，重签=1，补签=2......
+
+#补签
+execute \
+    as @a[scores={dlsign.patching_sign=1}] \
+    run function dlsign:patching_sign/patching_sign
