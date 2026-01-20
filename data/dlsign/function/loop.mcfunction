@@ -29,10 +29,7 @@ execute \
     as @a \
     run scoreboard players operation @s dlsign.player_sync_stat -= #dlsign dlsign.calendar
 execute \
-    as @a[scores={dlsign.sign_status=..1,dlsign.player_sync_stat=..-2}] \
-    run function dlsign:day_after_day/missing_sign
-execute \
-    as @a[scores={dlsign.player_sync_stat=..-2}] \
+    as @a[scores={dlsign.player_sync_stat=..-1,dlsign.sign_status=0..1}] \
     run function dlsign:day_after_day/missing_sign
 execute \
     as @a[scores={dlsign.player_sync_stat=-1,dlsign.sign_status=2}] \

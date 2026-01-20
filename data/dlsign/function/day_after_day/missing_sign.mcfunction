@@ -14,3 +14,5 @@ execute \
 execute \
     if score @s dlsign.lang matches 1 \
     run function dlsign:lang/en_us/missing_sign
+
+scoreboard players set @s dlsign.sign_status -1

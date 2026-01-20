@@ -14,3 +14,4 @@ execute \
 
 #同步日历
 scoreboard players operation @s dlsign.calendar = #dlsign dlsign.calendar
+scoreboard players set @s dlsign.player_sync_stat 0

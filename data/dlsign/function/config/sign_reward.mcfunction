@@ -5,4 +5,5 @@
 #你还可以添加更多的奖励，记得调整条件
 xp add @s 20 points
 give @s[scores={dlsign.player_signed_days=0}] minecraft:enchanted_golden_apple 1
+advancement grant @s[scores={dlsign.player_signed_days=0}] only dlsign:fitst_sign
 give @s[scores={dlsign.player_signed_days=1..}] minecraft:golden_apple 1

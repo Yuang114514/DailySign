@@ -34,6 +34,6 @@ tellraw @s \
     ]
 
 scoreboard players operation @s dlsign.calendar = #dlsign dlsign.calendar
-scoreboard players remove @s dlsign.calendar 1
+scoreboard players set @s dlsign.player_sync_stat 0
 
 tag @s add dlsign.initialized

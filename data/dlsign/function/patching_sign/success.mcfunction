@@ -5,7 +5,7 @@ scoreboard players operation @s dlsign.player_signed_days += @s dlsign.saved_pat
 scoreboard players set @s dlsign.saved_patching_signed_days 0
 
 #扣除经验
-function dlsign:config/patching_sign_cost
+function dlsign:config/patching_sign_cost1
 
 #输出成功消息
 execute \
@@ -16,4 +16,6 @@ execute \
     run function dlsign:lang/en_us/patching_sign_success
 
 scoreboard players operation @s dlsign.calendar = #dlsign dlsign.calendar
+scoreboard players set @s dlsign.player_sync_stat 0
 scoreboard players set @s dlsign.patching_sign 0
+scoreboard players set @s dlsign.sign_status 0

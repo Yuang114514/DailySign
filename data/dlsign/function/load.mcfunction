@@ -26,12 +26,15 @@ scoreboard objectives add dlsign.lang trigger
 #语言对照：0=zh_cn 1=en_us
 scoreboard objectives add dlsign.player_sync_stat dummy
 scoreboard objectives add dlsign.xp_levels level
-scoreboard objectives add dlsign.patching_level_operation dummy
 scoreboard objectives add dlsign.saved_patching_signed_days dummy
+scoreboard objectives add dlsign.patching_sign_cost dummy
 
 #显示计分板
 scoreboard objectives setdisplay sidebar dlsign.player_signed_days
-scoreboard players set #dlsign dlsign.total_signed_players 0
+scoreboard players set #dlsign dlsign.total_signed_players 0\
+
+#加载配置
+function dlsign:config/patching_sign_cost2
 
 #启动周期性函数
 schedule function dlsign:notice 100t

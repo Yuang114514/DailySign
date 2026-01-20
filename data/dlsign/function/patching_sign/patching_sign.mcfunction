@@ -1,11 +1,13 @@
 #补签
 
 #检查是否可以签到
-scoreboard players operation @s dlsign.patching_level_operation = @s dlsign.xp_levels
-scoreboard players operation @s dlsign.patching_level_operation -= #dlsign dlsign.xp_levels
 execute \
-    if score @s dlsign.patching_level_operation matches ..-1 \
+    if score @s dlsign.xp_levels < #dlsign dlsign.patching_sign_cost \
     run function dlsign:patching_sign/fail
 execute \
-    if score @s dlsign.patching_level_operation matches 0.. \
+    if score @s dlsign.xp_levels >= #dlsign dlsign.patching_sign_cost \
     run function dlsign:patching_sign/success
+
+#等待再次触发
+scoreboard players enable @s dlsign.patching_sign
+scoreboard players set @s dlsign.patching_sign 0
